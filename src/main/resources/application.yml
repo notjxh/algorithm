@@ -1,0 +1,13 @@
+server:
+  port: 8999
+#  servlet:
+#    context-path: /restful
+
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root@1234
+    url: jdbc:mysql://118.190.216.35:3306/luckymoney?characterEncodig=utf-8
