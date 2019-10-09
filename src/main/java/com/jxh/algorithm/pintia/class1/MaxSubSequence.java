@@ -10,34 +10,12 @@ public class MaxSubSequence {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int[] array = new int[n];
-        int maxSum = -1;
-        int thisSum = 0;
-        int startIndex = 0;
-        int endIndex = n-1;
-        int maxLength = 0;
-        int thisLength = 0;
         for (int i = 0; i < n; i++) {
-            array[i] = scanner.nextInt();
-            thisSum += array[i];
-            thisLength++;
-            if (thisSum> maxSum){
-                maxLength = thisLength;
-                maxSum = thisSum;
-                endIndex = i;
-            }
-            else if (thisSum<0){
-                thisSum = 0;
-                thisLength = 0;
+            if (scanner.hasNextInt()) {
+                array[i] = scanner.nextInt();
             }
         }
-        if (maxLength>0){
-            startIndex = endIndex-maxLength+1;
-        }
-
-        System.out.print((maxSum>0?maxSum:0)+" ");
-        System.out.print(array[startIndex]+" ");
-        System.out.print(array[endIndex]);
-//        getMaxSubSequence2(array,n);
+        getMaxSubSequence2(array,n);
 
     }
     private static void getMaxSubSequence(int[] array,int n){
