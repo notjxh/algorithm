@@ -16,6 +16,7 @@ public class ShuffleCards {
         }
 
         if (scanner.hasNextLine()){
+
             String nextLine = scanner.nextLine();
             order = nextLine.split(" ");
 
